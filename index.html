@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Profile</title>
+  <!-- Import icon dari eksternal, site: fontawesome -->
+  <script src="https://kit.fontawesome.com/a8c9218c8f.js" crossorigin="anonymous"></script>
+  <!-- Import font dari eksternal, site: googlefont -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <!-- Import internal CSS -->
+  <link rel="stylesheet" href="assets/css/index.css">
+</head>
+<body style="background-color: #dddddd; font-family: 'Poppins', Arial, sans-serif; font-size: 20px;">
+  
+
+  <!-- Navigation bar -->
+  <nav style="background-color: #f8f4f4;; height: 80px;">
+    <div style="display: flex; align-items: center; height: 100%; margin-left: 40px; margin-right: 30px;">
+        <ul style="display: flex; align-items: center; list-style-type: none; gap: 30px;">
+            <li>
+                <a href="https://www.dumbways.id" target="_blank" style="margin-left: 40px;"><img src="assets/img/logo-dumbways.png" height="40px" alt="Logo Dumbways"></a>
+            </li>
+            <li class="nav-link">
+                <a href="index.html">Home</a>
+            </li>
+            <li class="nav-link">
+              <a style="cursor: pointer;">Blog</a>
+          </li>
+        </ul>
+        <div style="display: flex ;justify-content: end; width: 100%; margin-right: 30px;">
+            <a href="contact.html" class="btn-contact">Contact Me</a>
+        </div>
+    </div>
+</nav>
+
+
+  <!-- Container baru untuk membungkus teks dan gambar -->
+  <div style="
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 1100px;
+    margin: 120px auto;
+    padding: 40px 20px; /* Padding atas-bawah 40px, kanan-kiri 20px */
+    background-color: #fcfdfc; /* Contoh background color */
+    border-radius: 7px; /* Contoh border radius */
+  ">
+    <!-- Div untuk teks -->
+    <div style="
+      width: 50%;
+      margin-right: 50px ;
+      text-align: left;
+    ">
+      <!-- Header -->
+      <h1 style="font-size: 1.5em; margin-bottom: 15px;">Hi, Welcome to my hut</h1>
+      
+      <!-- Isi Pesan -->
+      <p style="text-align: justify; padding-bottom: 15px;">My name is Teguh Irfan. I enrolled in Dumbways bootcamp on batch 55, and this is my first project. This project marks my initial step into the world of web development, and I'm committed to continuous learning and growth.</p>
+
+      <!-- Buttons Contact & Download CV -->
+      <div style="display: flex; justify-content: flex-start; gap: 15px; margin-bottom: 20px; padding-bottom: 5px;">
+        <!-- Button Contact -->
+        <button type="button"
+          onclick="window.location.href = 'https://api.whatsapp.com/send/?phone=62812345678&text&type=phone_number&app_absent=0'";
+          style="background-color: #111727;
+          color: white;
+          border-radius: 15px;
+          padding: 5px 15px;
+          border: none;
+          cursor: pointer;
+          text-align: center;
+          font-family: 'Poppins', Arial, sans-serif; font-size: 15px;
+          ">Contact</button>
+
+          <!-- Donwload CV -->
+          <a href="assets/CV.txt" download="CV.txt"
+          style="background-color: rgb(243, 243, 243);
+          color: #111727;
+          border-radius: 15px;
+          padding: 10px 10px;
+          text-decoration: none;
+          font-size: 15px;
+          border: 0px solid black;"
+          onmouseover="this.style.backgroundColor='rgb(204, 210, 212)';"
+          onmouseout="this.style.backgroundColor='rgb(243, 243, 243)';">
+          Download CV <i class="fas fa-download"></i></a>
+      </div>
+
+      <!-- Social Icons -->
+      <div style="display: flex; justify-content: center; gap: 15px; margin-bottom: 15px; ">
+        <a href="https://linkedin.com/tghirfn" target="_blank"><i class="fab fa-linkedin" style="font-size: 1.2em; color: black; cursor: pointer;"></i></a>
+        <a href="https://instagram.com/tghirfn" target="_blank"><i class="fab fa-instagram" style="font-size: 1.2em; color: black; cursor: pointer;"></i></a>
+        <a href="https://facebook.com/tghirfn" target="_blank"><i class="fab fa-facebook" style="font-size: 1.2em; color: black; cursor: pointer;"></i></a>
+        <a href="https://twitter.com/tghirfn" target="_blank"><i class="fab fa-twitter" style="font-size: 1.2em; color: black; cursor: pointer;"></i></a>
+      </div>
+    </div>
+
+    <!-- Div untuk gambar -->
+    <div style="
+      width: 25%;
+      text-align: center;
+      background-color: #f8f4f4;
+      border-radius: 7px;
+      margin-right: 0px;
+    ">
+      <img src="assets/img/Gambar-1.png" 
+        alt="my photo" 
+        style="width: 100%; border-radius: 5px; margin-bottom: 5px;">
+      <h1 style="margin: 5px 0; font-size: 1.2em;">Teguh Irfan</h1>
+      <p style="margin: 5px 0;padding-bottom: 10px; color: #494647); font-weight: 500; ">Full Stack Developer</p>
+    </div>
+  </div>
+</body>
+</html>
