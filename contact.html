@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Profile</title>
+  <!-- Import icon dari eksternal, site: fontawesome -->
+  <script src="https://kit.fontawesome.com/a8c9218c8f.js" crossorigin="anonymous"></script>
+  <!-- Import font dari eksternal, site: googlefont -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <!-- Import internal CSS -->
+  <link rel="stylesheet" href="assets/css/index.css">
+</head>
+<body style="background-color: #dddddd; font-family: 'Poppins', Arial, sans-serif; font-size: 20px;">
+  
+
+  <!-- Navigation bar -->
+  <nav style="background-color: #f8f4f4;; height: 80px;">
+    <div style="display: flex; align-items: center; height: 100%; margin-left: 40px; margin-right: 30px;">
+        <ul style="display: flex; align-items: center; list-style-type: none; gap: 30px;">
+            <li>
+                <a href="https://www.dumbways.id" target="_blank" style="margin-left: 40px;"><img src="assets/img/logo-dumbways.png" height="40px" alt="Logo Dumbways"></a>
+            </li>
+            <li class="nav-link">
+                <a href="index.html">Home</a>
+            </li>
+            <li class="nav-link">
+                <a href="blog.html">Blog</a>
+            </li>
+        </ul>
+        <div style="display: flex ;justify-content: end; width: 100%; margin-right: 30px;">
+            <a href="contact.html" class="btn-contact">Contact Me</a>
+        </div>
+    </div>
+</nav>
+    
+    <div class="container">
+        <h2>GET IN TOUCH</h2>
+        <form class="form-contact">
+            <!-- form nama -->
+            <label for="label-contact">Name</label>
+            <input type="text" class="input-contact" placeholder="Input your name">
+            <!-- form email -->
+            <label for="label-contact">Email</label>
+            <input type="text" class="input-contact" placeholder="youremail@domain.com">
+            <!-- form nomor hp -->
+            <label for="label-contact">Phone</label>
+            <input type="text" class="input-contact" placeholder=0823456******>
+            <!-- form multi option subject -->
+            <label for="label-contact">Subject</label>
+            <select class="input-contact">
+                <option></option>
+                <option>Frontend Developer</option>
+                <option>Backend Developer</option>
+                <option>Fullstack Developer</option>
+            </select>
+            <!-- form pesan -->
+            <label for="label-contact">Your Message</label>
+            <textarea class="input-contact"  id=""></textarea>
+            <!-- button submit -->
+            <input type="button" value="Submit" class="submit-contact">
+        </form>
+    </div>
+
+</body>
+</html>
