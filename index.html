@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Profile</title>
+  <!-- Import icon dari eksternal, site : fontawesome -->
+  <script src="https://kit.fontawesome.com/a8c9218c8f.js" crossorigin="anonymous"></script>
+  <!-- Import fonth dari eksternal, site : googlefont -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<!-- Atur jenis font yang diimport lewat external css -->
+<body style="background-color: rgb(248, 247, 245); font-family: 'Poppins', Arial, sans-serif; font-size: 15px;">
+  
+    <!-- Div 1 -->
+  <div style="
+    width: 300px;
+    margin: 40px auto;
+    padding: 30px 50px;
+    border-radius: 7px;
+    background-color: rgb(243, 243, 243);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    text-align: center;">
+    
+    <!-- Header -->
+    <h1 style="text-align: left; font-size: 1.5em; margin-bottom: 15px;">Hi, Welcome to my hut</h1>
+    
+    <!-- Isi Pesan -->
+    <!-- text-align: justify berfungsi agar text rata tengah -->
+    <p style="text-align: justify; padding-bottom: 15px;">My name is Teguh Irfan. I enrolled in Dumbways bootcamp on batch 55, and this is my first project. This project marks my initial step into the world of web development, and I'm committed to continuous learning and growth.</p>
+
+    <!-- Buttons Contact & Download CV -->
+    <div style="display: flex; justify-content: flex-start; gap: 10px; margin-bottom: 20px; padding-bottom: 5px;">
+      <!-- Tidak menggunakan a href karena button, namun bisa menggunakan fungsi ' onclick="window.location.href ' -->
+      <button type="button"
+        onclick="window.location.href = 'https://api.whatsapp.com/send/?phone=62812345678&text&type=phone_number&app_absent=0'";
+        style="background-color: black;
+        color: white;
+        border-radius: 10px;
+        padding: 5px 10px;
+        border: none;
+        cursor: pointer;">Contact</button>
+      <a href="assets/CV.txt" download="CV.txt"
+        style="background-color: rgb(243, 243, 243);
+        color: black;
+        border-radius: 10px;
+        padding: 5px 10px;
+        text-decoration: none;
+        border: 0px solid black;"
+        onmouseover="this.style.backgroundColor='rgb(204, 210, 212)';"
+        onmouseout="this.style.backgroundColor='rgb(243, 243, 243)';">
+        Download CV <i class="fas fa-download"></i></a>
+    </div>
+
+    <!-- Social Icons -->
+    <div style="display: flex; justify-content: center; gap: 15px; margin-bottom: 15px; ">
+      <a href="https://linkedin.com/tghirfn" target="_blank"><i class="fab fa-linkedin" style="font-size: 1.2em; color: black; cursor: pointer;"></i></a>
+      <a href="https://instagram.com/tghirfn" target="_blank"><i class="fab fa-instagram" style="font-size: 1.2em; color: black; cursor: pointer;"></i></a>
+      <a href="https://facebook.com/tghirfn" target="_blank"><i class="fab fa-facebook" style="font-size: 1.2em; color: black; cursor: pointer;"></i></a>
+      <a href="https://twitter/tghirfn" target="_blank"><i class="fab fa-twitter" style="font-size: 1.2em; color: black; cursor: pointer;"></i></a>
+    </div>
+    
+    <!-- Div 2-->
+    <div style="
+      border-radius: 10px;
+      background-color: white;
+      padding: 0px;
+      text-align: center;">
+      <img src="assets/Gambar-1.png" 
+        alt="my photo" 
+        style="width: 100%; border-radius: 5px; margin-bottom: 5px;">
+      <h1 style="margin: 5px 0; font-size: 1.2em;">Teguh Irfan</h1>
+      <p style="margin: 5px 0;padding-bottom: 10px; color: rgb(73, 73, 73); font-weight: 550; ">Full Stack Developer</p>
+    </div>
+    <!-- Tutup Div 2 -->
+  </div>
+  <!-- Tutup Div 1 -->
+</body>
+</html>
