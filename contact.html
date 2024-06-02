@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Profile</title>
+  <!-- Import icon dari eksternal, site: fontawesome -->
+  <script src="https://kit.fontawesome.com/a8c9218c8f.js" crossorigin="anonymous"></script>
+  <!-- Import font dari eksternal, site: googlefont -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <!-- Import internal CSS -->
+  <link rel="stylesheet" href="assets/css/index.css">
+    <link rel="stylesheet" href="assets/css/contact.css">
+  <link rel="stylesheet" href="assets/css/myproject.css">
+</head>
+<body style="background-color: #dddddd; font-family: 'Poppins', Arial, sans-serif; font-size: 20px;">
+  
+
+<!-- Navigation bar -->
+<nav style="background-color: #f8f4f4; height: 80px;">
+    <div
+        style="display: flex; align-items: center; justify-content: space-between; height: 100%; padding: 0 40px;">
+        <ul
+            style="display: flex; align-items: center; list-style-type: none; gap: 30px;">
+            <li>
+                <a href="https://www.dumbways.id" target="_blank">
+                    <img src="assets/img/logo-dumbways.png" height="40px" alt="Logo Dumbways"></a>
+                </li>
+                <li class="nav-link">
+                    <a href="index.html">Home</a>
+                </li>
+                <li class="nav-link">
+                    <a href="myproject.html">My Project</a>
+                </li>
+            </ul>
+            <a href="contact.html" class="btn-contact">Contact Me</a>
+        </div>
+    </nav>
+    
+    <!-- Container untuk membungkus form -->
+    <div class="container">
+        <h2>GET IN TOUCH</h2>
+        <form class="form-contact">
+            <!-- form nama -->
+            <label for="inputName">Name</label>
+            <input type="text" class="input-contact" id="inputName" placeholder="Input your name">
+
+            <!-- form email -->
+            <label for="inputEmail">Email</label>
+            <input type="email" class="input-contact" id="inputEmail" placeholder="youremail@domain.com">
+            
+            <!-- form nomor hp -->
+            <label for="inputPhone">Phone</label>
+            <input type="tel" class="input-contact" id="inputPhone" placeholder="0823456******">
+           
+            <!-- form multi option subject -->
+            <label for="inputSubject">Subject</label>
+            <select class="input-contact" id="inputSubject">
+                <option></option>
+                <option>Frontend Developer</option>
+                <option>Backend Developer</option>
+                <option>Fullstack Developer</option>
+            </select>
+           
+            <!-- form pesan -->
+            <label for="inputMessage">Your Message</label>
+            <textarea class="input-contact" id="inputMessage"></textarea>
+            
+            <!-- button submit -->
+            <input type="button" value="Submit" class="submit-contact" onclick="submitData()">
+        </form>
+    </div>
+
+  <!-- Import JS -->
+  <script src="assets/js/contact.js"></script>
+
+</body>
+</html>
