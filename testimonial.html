@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Testimonials</title>
+  <!-- Import icon dari eksternal, site: fontawesome -->
+  <script src="https://kit.fontawesome.com/a8c9218c8f.js" crossorigin="anonymous"></script>
+  <!-- Import font dari eksternal, site: googlefont -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <!-- Import internal CSS -->
+  <link rel="stylesheet" href="assets/css/index.css">
+  <link rel="stylesheet" href="assets/css/testimonial.css">
+
+</head>
+<body style="background-color: #dddddd; font-family: 'Poppins', Arial, sans-serif; font-size: 20px;">
+  
+
+<!-- Navigation bar -->
+<nav style="background-color: #f8f4f4; height: 80px;">
+    <div
+        style="display: flex; align-items: center; justify-content: space-between; height: 100%; padding: 0 40px;">
+        <ul
+            style="display: flex; align-items: center; list-style-type: none; gap: 30px;">
+            <li>
+                <a href="https://www.dumbways.id" target="_blank">
+                    <img src="assets/img/logo-dumbways.png" height="40px" alt="Logo Dumbways"></a>
+            </li>
+            <li class="nav-link nav-collapse">
+                <a href="index.html">Home</a>
+            </li>
+            <li class="nav-link nav-collapse">
+                <a href="myproject.html">My Project</a>
+            </li>
+            <li class="nav-link nav-collapse">
+                <a href="myproject.html">Testimonials</a>
+            </li>
+        </ul>
+        <a href="contact.html" class="btn-contact nav-collapse">Contact Me</a>
+        <i class="fa-solid fa-bars" style="cursor: pointer;" id="hamburger-button" onclick="openHamburger()"></i>
+    </div>
+</nav>
+
+    <!-- Navigation Bar Responsive -->
+    <div class="hamburger-nav-container" id="hamburger-nav-container">
+        <a href="index.html">Home</a>
+        <a href="myproject.html">My Project</a>
+        <a href="contact.html">Contact Me</a>
+        <a href="testimonial.html" class="active">Testimonials</a>
+    </div>
+
+<!-- Testimonials -->
+<div class="container">
+    <h1>My Testimonials</h1>
+    <h2> Rating By Star </h2>
+    <div class="container-rating">
+        <div class="rating" style="text-decoration: none;">
+            <button class="rating-btn" onclick="allTestimonial()"> ALL </button>
+            <button class="rating-btn" onclick="filterTestimonials(1)"> 1<i class="fa-solid fa-star" style="color: #ff9500;"></i> </button>
+            <button class="rating-btn" onclick="filterTestimonials(2)"> 2<i class="fa-solid fa-star" style="color: #ff9500;"></i> </button>
+            <button class="rating-btn" onclick="filterTestimonials(3)"> 3<i class="fa-solid fa-star" style="color: #ff9500;"></i> </button>
+            <button class="rating-btn" onclick="filterTestimonials(4)"> 4<i class="fa-solid fa-star" style="color: #ff9500;"></i> </button>
+            <button class="rating-btn" onclick="filterTestimonials(5)"> 5<i class="fa-solid fa-star" style="color: #ff9500;"></i> </button>
+        </div>
+
+    </div>
+
+    <div class="testimonials" id="testimonials">
+        <div class="testimonial">
+            <img src=""
+                alt="testimonial">
+                <p class="quote">Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Cumque voluptatum aut accusamus reprehenderit! Reprehenderit delectus explicabo
+                    magni nesciunt nihil! Sequi quam vero explicabo molestias placeat, molestiae
+                    facilis in nobis eum.</p>
+                <p class="author"></p>
+            </div>
+        </div>
+    </div>
+
+
+<script src="assets/js/nav.js"></script>  
+<script src="assets/js/testimonial.js"></script>  
+</body>
+</html>

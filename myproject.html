@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Project</title>
+  <!-- Import icon dari eksternal, site: fontawesome -->
+  <script src="https://kit.fontawesome.com/a8c9218c8f.js" crossorigin="anonymous"></script>
+  <!-- Import font dari eksternal, site: googlefont -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <!-- Import internal CSS -->
+  <link rel="stylesheet" href="assets/css/index.css">
+  <link rel="stylesheet" href="assets/css/contact.css">
+  <link rel="stylesheet" href="assets/css/myproject.css">
+</head>
+<body style="background-color: white; font-family: 'Poppins', Arial, sans-serif; font-size: 20px;">
+  
+
+<!-- Navigation bar -->
+<nav style="background-color: #f8f4f4; height: 80px;">
+    <div
+        style="display: flex; align-items: center; justify-content: space-between; height: 100%; padding: 0 40px;">
+        <ul
+            style="display: flex; align-items: center; list-style-type: none; gap: 30px;">
+            <li>
+                <a href="https://www.dumbways.id" target="_blank">
+                    <img src="assets/img/logo-dumbways.png" height="40px" alt="Logo Dumbways"></a>
+            </li>
+            <li class="nav-link nav-collapse">
+                <a href="index.html">Home</a>
+            </li>
+            <li class="nav-link nav-collapse">
+                <a href="myproject.html">My Project</a>
+            </li>
+            <li class="nav-link nav-collapse">
+                <a href="testimonial.html">Testimonials</a>
+            </li>
+        </ul>
+        <a href="contact.html" class="btn-contact nav-collapse">Contact Me</a>
+        <i class="fa-solid fa-bars" style="cursor: pointer;" id="hamburger-button" onclick="openHamburger()"></i>
+    </div>
+</nav>
+
+    <!-- Navigation Bar Responsive -->
+    <div class="hamburger-nav-container" id="hamburger-nav-container">
+        <a href="index.html">Home</a>
+        <a href="myproject.html" class="active">My Project</a>
+        <a href="contact.html">Contact Me</a>
+        <a href="testimonial.html">Testimonials</a>
+    </div>
+
+
+<!-- Container untuk membungkus form -->
+<div style="
+ display: flex;
+ align-items: center;
+ justify-content: space-around;
+ width: 100%;
+ height: 85%;
+ margin: 0 auto;
+ padding: 10px 20px;
+ background-color: #d1d1d1;
+ border-radius: 7px;
+">
+
+<!-- Container form -->
+<div class="container2">
+    <h2>ADD MY PROJECT</h2>
+    <form class="form-contact2" onsubmit="submitProject(event)">
+        <!-- form Nama Project -->
+        <label for="inputProjectName">Project Name</label>
+        <input type="text" class="input-contact2" id="inputProjectName" placeholder="Input your project name">
+        
+         <!-- Start Date and End Date -->
+        <div style="display: flex; justify-content: space-between;">
+            <!-- Start Date -->
+            <div style="width: 48%; display: flex; flex-direction: column;">
+                <label for="inputStartDate">Start Date</label>
+                <input type="date" class="input-contact2" id="inputStartDate">
+            </div>
+            <!-- End Date -->
+            <div style="width: 48%; display: flex; flex-direction: column;">
+                <label for="inputEndDate">End Date</label>
+                <input type="date" class="input-contact2" id="inputEndDate">
+            </div>
+        </div>
+
+        
+        <!-- form Description -->
+        <label for="inputDescription">Description</label>
+        <textarea class="input-contact2" id="inputDescription" placeholder="Input your description"></textarea>
+
+<!-- form Technologies -->
+<label>Technologies</label>
+<div style="display: grid;grid-template-columns: auto auto;flex-wrap: wrap; gap: 10px; margin-bottom: 20px;"> <!-- Added gap for spacing -->
+    <div style="display: flex; align-items: center;">
+        <input type="checkbox" id="techNodeJs" class="input-checkbox">
+        <label for="techNodeJs">Node Js</label>
+    </div>
+    <div style="display: flex; align-items: center;">
+        <input type="checkbox" id="techNextJs" class="input-checkbox">
+        <label for="techNextJs">Next Js</label>
+    </div>
+    <div style="display: flex; align-items: center;">
+        <input type="checkbox" id="techReactJs" class="input-checkbox">
+        <label for="techReactJs">React Js</label>
+    </div>
+    <div style="display: flex; align-items: center;">
+        <input type="checkbox" id="techTypeScript" class="input-checkbox">
+        <label for="techTypeScript">TypeScript</label>
+    </div>
+</div>
+
+        
+        <!-- form upload image -->
+        <div class="input-file-container">
+            <label for="inputImage">Upload Image</label>
+            <input type="file" id="inputImage" class="input-file">
+        </div>
+
+        
+        <!-- button submit -->
+        <input type="submit" value="Submit" class="submit-contact2">
+    </form>
+</div>
+</div> <!-- Menutup div utama -->
+
+<!-- Bagian MY PROJECT dipindahkan ke sini -->
+<div>
+    <hr class="line" />
+    <h2 class="title-list">MY PROJECT</h2>
+    
+    <div id="projectsContainer" class="blog-list"></div>
+</div>
+
+  <!-- Import JS -->
+<script src="assets/js/myproject.js"></script>
+<script src="assets/js/nav.js"></script>
+</body>
+</html> 
