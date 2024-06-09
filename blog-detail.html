@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog Detail</title>
+  <!-- Import icon dari eksternal, site: fontawesome -->
+  <script src="https://kit.fontawesome.com/a8c9218c8f.js" crossorigin="anonymous"></script>
+  <!-- Import font dari eksternal, site: googlefont -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <!-- Import internal CSS -->
+  <link rel="stylesheet" href="assets/css/index.css">
+</head>
+<body style="background-color: #dddddd; font-family: 'Poppins', Arial, sans-serif; font-size: 20px;">
+  
+
+<!-- Navigation bar -->
+<nav style="background-color: #f8f4f4; height: 80px;">
+    <div
+        style="display: flex; align-items: center; justify-content: space-between; height: 100%; padding: 0 40px;">
+        <ul
+            style="display: flex; align-items: center; list-style-type: none; gap: 30px;">
+            <li>
+                <a href="https://www.dumbways.id" target="_blank">
+                    <img src="assets/img/logo-dumbways.png" height="40px" alt="Logo Dumbways"></a>
+            </li>
+            <li class="nav-link nav-collapse">
+                <a href="index.html">Home</a>
+            </li>
+            <li class="nav-link nav-collapse">
+                <a href="myproject.html">My Project</a>
+            </li>
+            <li class="nav-link nav-collapse">
+                <a href="testimonial.html">Testimonials</a>
+            </li>
+        </ul>
+        <a href="contact.html" class="btn-contact nav-collapse">Contact Me</a>
+        <i class="fa-solid fa-bars" style="cursor: pointer;" id="hamburger-button" onclick="openHamburger()"></i>
+    </div>
+</nav>
+
+    <!-- Navigation Bar Responsive -->
+    <div class="hamburger-nav-container" id="hamburger-nav-container">
+        <a href="index.html">Home</a>
+        <a href="myproject.html">My Project</a>
+        <a href="contact.html">Contact Me</a>
+        <a href="testimonial.html">Testimonials</a>
+    </div>
+
+    <div class="blog-detail">
+        <div class="blog-detail-container">
+            <h1>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laudantium facere sint reprehenderit natus necessitatibus assumenda quaerat amet. Nemo, sit voluptatem iure modi similique rerum asperiores repellendus nostrum doloremque, nam harum?</h1>
+        </div>
+    </div>
+
+
+</body>
+</html>

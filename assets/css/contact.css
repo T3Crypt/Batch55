@@ -1,0 +1,60 @@
+/* ***************** */
+/* CSS contact.html */
+/* **************** */
+
+.container{
+    margin: 20px auto;
+    justify-content: center;
+    max-width: 600px; /* Lebar maksimum form */
+    padding: 20px;
+}
+
+ .container h2{
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.form-contact{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    font-weight: bold;
+}
+
+.form-contact h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #111727; /* Warna teks judul */
+}
+
+.input-contact{
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1); /* Shadow di dalam input */
+}
+
+.submit-contact{
+    background-color: #111727; /* Warna latar belakang button */
+    color: white;
+    width: 30%;
+    margin-top: 20px;
+    padding: 15px 30px;
+    border-radius: 10px;
+    cursor: pointer;
+    text-align: center;
+    font-family: 'Poppins', Arial, sans-serif; font-size: 15px;
+    align-items: end;
+    justify-content: center;
+    margin-left: auto; /* Biar geser kekanan */
+}
+
+.submit-contact:hover {
+    background-color: #b3aeae; /* Warna saat di-hover */
+}
+
+textarea.input-contact{
+    resize: none;
+    height: 250px;
+}
