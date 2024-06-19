@@ -54,7 +54,7 @@
     background-color: #b3aeae; /* Warna saat di-hover */
 }
 
-textarea.input-contact{
+textarea.form-control{
     resize: none;
     height: 250px;
 }

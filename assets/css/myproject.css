@@ -1,10 +1,10 @@
 /* **************************** */
 /****** CSS myproject.html ******/
-/* *************************** */
+/* **************************** */
 
 /* Container form CSS */
 .container2 {
-    width: 80%;
+    width: 100%;
     margin: 20px auto;
     justify-content: center;
     max-width: 500px; /* Lebar maksimum form */
@@ -20,13 +20,6 @@
     display: flex;
     flex-direction: column;
     width: 100%;
-    font-weight: bold;
-}
-
-.form-contact2 h2 {
-    text-align: center;
-    margin-bottom: 10px;
-    color: #111727; /* Warna teks judul */
     font-weight: bold;
 }
 
@@ -68,11 +61,11 @@ textarea.input-contact2 {
 }
 
 #projectsContainer {
-    width: 80%;
-    margin: 20px auto 0;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Tiga kolom */
-    gap: 20px;
+    width: 100%;
+    margin: 20px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Untuk memastikan item tersebar merata */
 }
 
 .input-file {
@@ -90,84 +83,90 @@ textarea.input-contact2 {
     margin-bottom: 20px;
 }
 
-/* MY PROJEECT BAWAH */
+/* MY PROJECT SECTION */
 .line {
     display: none; /* Menghilangkan garis pemisah */
 }
 
-/* TULISAN MY PROJECT BAWAH */
 .title-list {
+
+}
+.myproject-section h1.title-list {
     text-align: center;
-    font-size: 20px;
-    margin-top: 40px;
-}
-
-.blog-list {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Tiga kolom */
-    gap: 20px; /* Jarak antar item */
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    padding-bottom: 60px;
-}
-
+    font-size: 40px;
+    padding-top: 40px;
+  }
 .project-card {
-    background: #ffffff;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     padding: 10px;
-    position: relative;
     display: flex;
     flex-direction: column;
-    align-items: center; /* Tengahin konten */
-    justify-content: space-between; /* Sebar konten secara vertikal */
+    align-items: center; /* Tengah konten */
+    justify-content: center; /* Sebar konten secara vertikal */
     height: auto; /* Tinggi tetap untuk semua card */
-    max-height: 100%;
 }
 
 .project-card img {
-    min-height: 200px;
-    height: 550px;
     width: 100%;
-    max-height: 75%;  /* Maksimum tinggi untuk gambar */
-    object-fit: cover; /* Pastikan gambar menutupi area yang diberikan tanpa menghilangkan rasio aspek */
-    border-radius: 10px;
+    max-height: 200px;
+    min-height: 200px; /* Menambahkan tinggi minimum untuk konsistensi */
+    object-fit: cover; /* Menjaga rasio aspek gambar */
 }
 
-/* Atur area dan info di bawah gambar yang diupload */
-.project-card .info {
-    text-align: left; /* Mengatur teks agar rata kiri */
-    width: 100%; /* Memastikan elemen mengambil seluruh lebar yang tersedia */
-    margin-left: 10px; /* Menambahkan margin kiri jika diinginkan */
+.myproject-section{
+    background-color: white;
+    padding-bottom: 40px;
+    padding-left: 40px;
+    padding-right: 40px;
 }
 
-.project-card h3 {
-    text-align: left; /* Mengatur teks agar rata kiri */
+.card-body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     width: 100%;
-    margin-left: 10px;
-    font-weight: bold; /* Mengatur teks menjadi bold */
-    margin-bottom: 10px;
 }
 
-.project-card p {
+.project-card h5, .project-card p {
     text-align: left; /* Mengatur teks agar rata kiri */
     width: 100%;
-    margin-left: 10px;
 }
 
-/* Styles for edit and delete buttons */
+.project-technologies {
+    display: flex;
+    flex-wrap: wrap; /* Untuk memastikan teks terbungkus dengan benar */
+    justify-content: center; /* Untuk memastikan konten dimulai dari kiri */
+    width: 100%; /* Set width to 100% */
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.project-technologies span {
+    display: flex;
+    align-items: center;
+    margin: 5px; /* Adjust the margin as needed */
+}
+
+.posted-time {
+    font-weight: bold;
+    margin-top: 10px;
+    color: #555; /* Ubah sesuai kebutuhan */
+    text-align: left; /* Menyelaraskan teks di kiri */
+}
+
 .project-actions {
     display: flex;
     justify-content: center;
     width: 100%;
     margin-top: 10px;
-    gap: 20px;
+    gap: 10px;
 }
 
 .button {
-    width: 35%; /* Set the button width to 35% */
+    width: 45%; /* Set the button width to 45% */
     padding: 10px 20px; /* Adjust padding for bigger buttons */
     background-color: #111727;
     color: white;
@@ -177,17 +176,13 @@ textarea.input-contact2 {
     display: flex; /* Menjadikan tombol sebagai flex container */
     align-items: center; /* Menyelaraskan ikon dan teks di tengah secara vertikal */
     justify-content: center; /* Menyelaraskan ikon dan teks di tengah secara horizontal */
-    gap: 50px; /* Memberi jarak antara ikon dan teks */
+    gap: 10px; /* Memberi jarak antara ikon dan teks */
     font-size: 16px; /* Adjust font size */
-    align-items: center;
+    margin: 10px 10px;
 }
 
 .button:hover {
     background-color: #b3aeae;
-}
-
-.button i {
-    margin-right: 5px;
 }
 
 /* Icon untuk button */
@@ -202,26 +197,3 @@ textarea.input-contact2 {
     font-family: "Font Awesome 5 Free";
     font-weight: 900;
 }
-
-/* Styles for technology icons and text */
-.project-technologies {
-    display: flex;
-    flex-wrap: wrap; /* Untuk memastikan teks terbungkus dengan benar */
-    justify-content:center; /* Untuk memastikan konten dimulai dari kiri */
-    width: 100%; /* Set width to 100% */
-    padding-left: 20px;
-    padding-right: 20px;
-}
-
-.project-technologies span {
-    display: flex;
-    align-items: center;
-    margin: 10px; /* Adjust the margin as needed */
-    margin-bottom: 10px;
-}
-
-.posted-time {
-    font-weight: bold;
-    margin-top: 10px;
-    color: #555; /* Ubah sesuai kebutuhan */
-  }
