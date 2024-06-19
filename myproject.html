@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Project</title>
+  <!-- Import icon dari eksternal, site: fontawesome -->
+  <script src="https://kit.fontawesome.com/a8c9218c8f.js" crossorigin="anonymous"></script>
+  <!-- Import font dari eksternal, site: googlefont -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <!-- Import internal CSS -->
+  <link rel="stylesheet" href="assets/css/index.css">
+  <link rel="stylesheet" href="assets/css/myproject.css">
+  <!-- Import Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body style="background-color: #dddddd; font-family: 'Poppins', Arial, sans-serif; font-size: 20px;">
+
+<!-- Navigation bar -->
+<nav class="navbar navbar-expand-lg custom-navbar py-3">
+  <!-- navbar: Menentukan bahwa ini adalah elemen navbar -->
+  <!-- navbar-expand-lg: Membuat navbar responsif dengan layout horizontal pada layar besar -->
+  <!-- custom-navbar: Kelas khusus untuk styling navbar -->
+  <!-- py-3: Padding vertikal dengan ukuran 3 -->
+  <div class="container-fluid px-5">
+    <!-- container-fluid: Mengatur kontainer agar melebar penuh dalam grid Bootstrap -->
+    <!-- px-5: Padding horizontal dengan ukuran 5 -->
+    <a class="navbar-brand ms-3" href="https://www.dumbways.id" target="_blank">
+      <!-- navbar-brand: Kelas untuk mengatur branding atau logo dalam navbar -->
+      <!-- ms-3: Margin kiri dengan ukuran 3 -->
+      <img src="assets/img/logo-dumbways.png" height="40px" alt="Logo Dumbways">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <!-- navbar-toggler: Tombol untuk toggle navbar pada layar kecil -->
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <!-- collapse navbar-collapse: Membuat menu navbar bisa di-toggle -->
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <!-- navbar-nav: Kelas untuk mengatur daftar navigasi dalam navbar -->
+        <!-- me-auto: Margin kanan otomatis untuk menggeser item lain ke kanan -->
+        <!-- mb-2: Margin bawah dengan ukuran 2 -->
+        <!-- mb-lg-0: Menghapus margin bawah pada layar besar -->
+        <li class="nav-item ms-4">
+          <!-- nav-item: Kelas untuk mengatur item dalam daftar navigasi -->
+          <!-- ms-4: Margin kiri dengan ukuran 4 -->
+          <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+          <!-- nav-link: Kelas untuk mengatur link dalam navigasi -->
+          <!-- active: Kelas untuk menandakan link yang aktif -->
+          <!-- aria-current: Menandakan halaman saat ini untuk pembaca layar -->
+        </li>
+        <li class="nav-item ms-4">
+          <a class="nav-link" href="myproject.html">My Project</a>
+        </li>
+        <li class="nav-item ms-4">
+          <a class="nav-link" href="testimonial.html">Testimonials</a>
+        </li>
+      </ul>
+      <a href="contact.html" class="btn custom-btn nav-collapse ms-4">Contact Me</a>
+      <!-- btn: Kelas untuk membuat tombol dengan styling Bootstrap -->
+      <!-- custom-btn: Kelas khusus untuk styling tombol -->
+      <!-- nav-collapse: Menentukan bahwa ini adalah item yang bisa collapse -->
+      <!-- ms-4: Margin kiri dengan ukuran 4 -->
+    </div>
+  </div>
+</nav>
+
+<!-- Container untuk membungkus form -->
+<div class="container py-4">
+  <!-- Menggunakan kelas Bootstrap 'container' untuk tata letak responsif -->
+  <div class="row justify-content-center">
+    <!-- Menggunakan kelas Bootstrap 'row' dan 'justify-content-center' untuk memusatkan konten -->
+    <div class="col-lg-6">
+      <!-- Menggunakan kelas Bootstrap 'col-lg-6' untuk mengatur lebar kolom -->
+      <div class="card p-4">
+        <!-- Menggunakan kelas Bootstrap 'card' untuk styling card -->
+        <h2 class="text-center mb-4"><b>ADD MY PROJECT</b></h2>
+        <form class="form-contact2" onsubmit="submitProject(event)">
+          <!-- form Nama Project -->
+          <div class="mb-3">
+            <!-- Menggunakan kelas Bootstrap 'mb-3' untuk margin bawah -->
+            <label for="inputProjectName" class="form-label">Project Name</label>
+            <!-- Menggunakan kelas Bootstrap 'form-label' untuk styling label -->
+            <input type="text" class="form-control input-contact2" id="inputProjectName" placeholder="Input your project name">
+            <!-- Menggunakan kelas Bootstrap 'form-control' untuk styling input -->
+          </div>
+
+          <!-- Start Date and End Date -->
+          <div class="row">
+            <!-- Menggunakan kelas Bootstrap 'row' untuk tata letak grid -->
+            <div class="col-md-6 mb-3">
+              <!-- Menggunakan kelas Bootstrap 'col-md-6' dan 'mb-3' untuk margin bawah -->
+              <label for="inputStartDate" class="form-label">Start Date</label>
+              <input type="date" class="form-control input-contact2" id="inputStartDate">
+            </div>
+            <div class="col-md-6 mb-3">
+              <!-- Menggunakan kelas Bootstrap 'col-md-6' dan 'mb-3' untuk margin bawah -->
+              <label for="inputEndDate" class="form-label">End Date</label>
+              <input type="date" class="form-control input-contact2" id="inputEndDate">
+            </div>
+          </div>
+
+          <!-- form Description -->
+          <div class="mb-3">
+            <!-- Menggunakan kelas Bootstrap 'mb-3' untuk margin bawah -->
+            <label for="inputDescription" class="form-label">Description</label>
+            <textarea class="form-control input-contact2" id="inputDescription" placeholder="Input your description"></textarea>
+          </div>
+
+          <!-- form Technologies -->
+          <label class="form-label">Technologies</label>
+          <div class="mb-3">
+            <!-- Menggunakan Bootstrap 'row' dan 'col' untuk tata letak grid -->
+            <div class="row">
+              <div class="col-6">
+                <div class="form-check">
+                  <input type="checkbox" id="techNodeJs" class="form-check-input input-checkbox">
+                  <label for="techNodeJs" class="form-check-label">Node Js</label>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="form-check">
+                  <input type="checkbox" id="techNextJs" class="form-check-input input-checkbox">
+                  <label for="techNextJs" class="form-check-label">Next Js</label>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="form-check">
+                  <input type="checkbox" id="techReactJs" class="form-check-input input-checkbox">
+                  <label for="techReactJs" class="form-check-label">React Js</label>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="form-check">
+                  <input type="checkbox" id="techTypeScript" class="form-check-input input-checkbox">
+                  <label for="techTypeScript" class="form-check-label">TypeScript</label>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <!-- form upload image -->
+          <div class="mb-3">
+            <!-- Menggunakan kelas Bootstrap 'mb-3' untuk margin bawah -->
+            <label for="inputImage" class="form-label">Upload Image</label>
+            <input type="file" id="inputImage" class="form-control input-file">
+          </div>
+
+          <!-- button submit -->
+          <div class="d-grid">
+            <!-- Menggunakan kelas Bootstrap 'd-grid' untuk membuat tombol penuh -->
+            <input type="submit" value="Submit" class="btn submit-contact2 btn-dark">
+            <!-- Menggunakan kelas Bootstrap 'btn' untuk styling tombol -->
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Bagian MY PROJECT dipindahkan ke sini -->
+<div class="myproject-section">
+  <h1 class="title-list"><b>MY PROJECT</b></h1>
+  <div id="projectsContainer" class="row"></div>
+</div>
+
+
+<!-- Import JS -->
+<script src="assets/js/myproject.js"></script>
+<!-- Import Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
