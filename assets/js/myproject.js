@@ -97,34 +97,45 @@ function timeSince(date) {
   }
   return `${Math.floor(secondsPast / 31536000)} years ${Math.floor((secondsPast % 31536000) / 2592000)} months ago`;
 }
-
 function renderProjects() {
   let projectsContainer = document.getElementById("projectsContainer");
   projectsContainer.innerHTML = ""; // Mengosongkan container
 
   // Loop melalui semua data proyek dan membuat HTML untuk setiap proyek
   projectsData.forEach((project, index) => {
-    const startYear = new Date(project.startDate).getFullYear();
-    const duration = calculateDuration(project.startDate, project.endDate);
-    const postedTime = timeSince(project.postedDate);
-    projectsContainer.innerHTML += `
-      <div class="project-card">
-        <img src="${project.image}" alt="Project Image">
-        <h3>${project.name} - ${startYear}</h3>
-        <p>Durasi: ${duration}</p>
-        <p>${project.description}</p>
-        <p class="posted-time">${postedTime}</p>
-        <div class="project-technologies">
-          ${project.technologies.map(tech => `<span>${tech}</span>`).join(' ')}
-        </div>
-        <div class="project-actions">
-          <button class="button edit">Edit</button>
-          <button class="button delete" onclick="deleteProject(${index})">Delete</button>
-        </div>
-      </div>
-    `;
+      const startYear = new Date(project.startDate).getFullYear();
+      const duration = calculateDuration(project.startDate, project.endDate);
+      const postedTime = timeSince(project.postedDate);
+
+      const projectCard = `
+          <div class="container col-lg-3 col-md-4 col-sm-12 mb-4">
+              <div class="project-card card h-100">
+                  <img src="${project.image}" class="card-img-top" alt="Project Image">
+                  <div class="card-body">
+                      <h5 class="card-title">${project.name} - ${startYear}</h5>
+                      <p class="card-text">Durasi: ${duration}</p>
+                      <p class="card-text">${project.description}</p>
+                      <p class="text-muted posted-time">${postedTime}</p>
+                      <div class="project-technologies">
+                          ${project.technologies.map(tech => `<span> ${tech}</span>`).join(' ')}
+                      </div>
+                  </div>
+                  <div class="project-actions">
+                    <button class="button edit">Edit</button>
+                    <button class="button delete" onclick="deleteProject(${index})">Delete</button>
+                  </div>
+              </div>
+          </div>
+      `;
+
+      projectsContainer.innerHTML += projectCard;
   });
 }
+
+
+
+
+
 
 function deleteProject(index) {
   projectsData.splice(index, 1);
