@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Testimonials</title>
+  <!-- Import icon dari eksternal, site: fontawesome -->
+  <script src="https://kit.fontawesome.com/a8c9218c8f.js" crossorigin="anonymous"></script>
+  <!-- Import font dari eksternal, site: googlefont -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <!-- Import internal CSS -->
+  <link rel="stylesheet" href="assets/css/index.css">
+  <link rel="stylesheet" href="assets/css/testimonial.css">
+  <!-- Import Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body style="background-color: #dddddd; font-family: 'Poppins', Arial, sans-serif; font-size: 20px;">
+
+<!-- Navigation bar -->
+<nav class="navbar navbar-expand-lg custom-navbar py-3">
+  <!-- navbar: Menentukan bahwa ini adalah elemen navbar -->
+  <!-- navbar-expand-lg: Membuat navbar responsif dengan layout horizontal pada layar besar -->
+  <!-- custom-navbar: Kelas khusus untuk styling navbar -->
+  <!-- py-3: Padding vertikal dengan ukuran 3 -->
+  <div class="container-fluid px-5">
+    <!-- container-fluid: Mengatur kontainer agar melebar penuh dalam grid Bootstrap -->
+    <!-- px-5: Padding horizontal dengan ukuran 5 -->
+    <a class="navbar-brand ms-3" href="https://www.dumbways.id" target="_blank">
+      <!-- navbar-brand: Kelas untuk mengatur branding atau logo dalam navbar -->
+      <!-- ms-3: Margin kiri dengan ukuran 3 -->
+      <img src="assets/img/logo-dumbways.png" height="40px" alt="Logo Dumbways">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <!-- navbar-toggler: Tombol untuk toggle navbar pada layar kecil -->
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <!-- collapse navbar-collapse: Membuat menu navbar bisa di-toggle -->
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <!-- navbar-nav: Kelas untuk mengatur daftar navigasi dalam navbar -->
+        <!-- me-auto: Margin kanan otomatis untuk menggeser item lain ke kanan -->
+        <!-- mb-2: Margin bawah dengan ukuran 2 -->
+        <!-- mb-lg-0: Menghapus margin bawah pada layar besar -->
+        <li class="nav-item ms-4">
+          <!-- nav-item: Kelas untuk mengatur item dalam daftar navigasi -->
+          <!-- ms-4: Margin kiri dengan ukuran 4 -->
+          <a class="nav-link active" aria-current="page" href="/">Home</a>
+          <!-- nav-link: Kelas untuk mengatur link dalam navigasi -->
+          <!-- active: Kelas untuk menandakan link yang aktif -->
+          <!-- aria-current: Menandakan halaman saat ini untuk pembaca layar -->
+        </li>
+        <li class="nav-item ms-4">
+          <a class="nav-link" href="/myproject">My Project</a>
+        </li>
+        <li class="nav-item ms-4">
+          <a class="nav-link" href="/testimonial">Testimonials</a>
+        </li>
+      </ul>
+      <a href="/contact" class="btn custom-btn nav-collapse ms-4">Contact Me</a>
+      <!-- btn: Kelas untuk membuat tombol dengan styling Bootstrap -->
+      <!-- custom-btn: Kelas khusus untuk styling tombol -->
+      <!-- nav-collapse: Menentukan bahwa ini adalah item yang bisa collapse -->
+      <!-- ms-4: Margin kiri dengan ukuran 4 -->
+    </div>
+  </div>
+</nav>
+
+<!-- Testimonials -->
+<div class="container">
+  <h1><b>My Testimonials</b></h1>
+  <h2> Rating By Star </h2>
+  <div class="container-rating">
+      <div class="rating" style="text-decoration: none;">
+          <button class="rating-btn" onclick="allTestimonial()"> ALL </button>
+          <button class="rating-btn" onclick="filterTestimonials(1)"> 1<i class="fa-solid fa-star" style="color: #ff9500;"></i> </button>
+          <button class="rating-btn" onclick="filterTestimonials(2)"> 2<i class="fa-solid fa-star" style="color: #ff9500;"></i> </button>
+          <button class="rating-btn" onclick="filterTestimonials(3)"> 3<i class="fa-solid fa-star" style="color: #ff9500;"></i> </button>
+          <button class="rating-btn" onclick="filterTestimonials(4)"> 4<i class="fa-solid fa-star" style="color: #ff9500;"></i> </button>
+          <button class="rating-btn" onclick="filterTestimonials(5)"> 5<i class="fa-solid fa-star" style="color: #ff9500;"></i> </button>
+      </div>
+  </div>
+
+  <div class="row justify-content-center" id="testimonials">
+      <!-- Placeholder untuk JavaScript memasukkan testimonial -->
+  </div>
+</div>
+
+
+
+  <!-- Import Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/testimonial.js"></script>  
+</body>
+</html>
