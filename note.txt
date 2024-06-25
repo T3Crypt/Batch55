@@ -1,0 +1,61 @@
+SEQUELIZE :
+
+Setting awal :
+# npm install --save-dev sequelize-cli
+# npx sequelize-cli init
+
+Add Type :
+# npx sequelize-cli model:generate --name type_tb --attributes name:string
+
+Add Hero :
+# npx sequelize-cli model:generate --name heroes_tb --attributes name:string,type_id:integer,photo:string
+
+Migrasi / Buat Table :
+# npx sequelize-cli db:migrate
+
+Masuk ke db ml_project : 
+#  psql -U postgres -h 127.0.0.1 -d ml_project
+
+TYPE HERO :
+1. Poke
+2. Damage
+
+HERO :
+Poke -> Vexana, Kagura, Nana
+Damage -> Alpha Alucard
+
+Tambahkan type_tb :
+INSERT INTO "type_tb" (name, "createdAt", "updatedAt") VALUES ('Poke', NOW(), NOW());
+INSERT INTO "type_tb" (name, "createdAt", "updatedAt") VALUES ('Damage', NOW(), NOW());
+
+Liat isinya :
+SELECT * FROM type_tb;
+
+Tambahkan heroes_tb :
+INSERT INTO "heroes_tb" (name, type_id, photo, "createdAt", "updatedAt") VALUES 
+('Vexana', 89, 'https://static.wikia.nocookie.net/mobile-legends/images/3/36/Hero381-portrait.png', NOW(), NOW()),
+('Kagura', 89, 'https://static.wikia.nocookie.net/mobile-legends/images/8/8e/Hero251-portrait.png', NOW(), NOW()),
+('Nana', 89, 'https://static.wikia.nocookie.net/mobile-legends/images/a/a4/Hero051-portrait.png', NOW(), NOW()),
+('Alpha', 90, 'https://static.wikia.nocookie.net/mobile-legends/images/b/b0/Hero281-portrait.png', NOW(), NOW()),
+('Alucard', 90, 'https://static.wikia.nocookie.net/mobile-legends/images/0/01/Hero071-portrait.png', NOW(), NOW());
+
+Liat seluruh isinya :
+SELECT * FROM "heroes_tb";
+
+Tampilkan seluruh data dari table heroes beserta type dari hero tsb :
+SELECT heroes_tb.id, heroes_tb.name, type_tb.name as type_name, heroes_tb.photo, heroes_tb."createdAt", heroes_tb."updatedAt"
+FROM heroes_tb
+JOIN type_tb ON heroes_tb.type_id = type_tb.id;
+
+Tampilkan seluruh data heroes berdasarkan type tertentu (Poke) :
+SELECT heroes_tb.id, heroes_tb.name, type_tb.name as type_name, heroes_tb.photo, heroes_tb."createdAt", heroes_tb."updatedAt"
+FROM heroes_tb
+JOIN type_tb ON heroes_tb.type_id = type_tb.id
+WHERE type_tb.name = 'Poke';
+
+Tampilkan spesifik data heroes(Alpha) dengan type(Damage) nya :
+SELECT heroes_tb.id, heroes_tb.name, type_tb.name as type_name, heroes_tb.photo, heroes_tb."createdAt", heroes_tb."updatedAt"
+FROM heroes_tb
+JOIN type_tb ON heroes_tb.type_id = type_tb.id
+WHERE heroes_tb.name = 'Alpha' AND type_tb.name = 'Damage';
+
