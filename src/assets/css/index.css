@@ -1,0 +1,241 @@
+/* Reset margin dan padding untuk semua elemen */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Membatasi lebar body sesuai viewport dan menyembunyikan overflow horizontal */
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+/* Styling untuk link navigasi */
+.nav-link {
+  font-size: 20px;
+  padding: 10px 15px;
+  border-radius: 5px;
+}
+
+/* Warna teks untuk link navigasi */
+.navbar-light .navbar-nav .nav-link {
+  color: #1e1e1e;
+}
+
+/* Warna teks saat hover untuk link navigasi */
+.navbar-light .navbar-nav .nav-link:hover {
+  color: orangered;
+}
+
+/* Warna teks dan penebalan untuk link aktif pada navigasi */
+.navbar-light .navbar-nav .nav-link.active {
+  font-weight: bold;
+}
+
+/* Styling untuk tombol */
+.btn-contact,
+.custom-btn {
+  background-color: #111727;
+  color: white;
+  padding: 10px 20px;
+  font-size: 15px;
+  text-decoration: none;
+  text-align: center;
+  border-radius: 10px;
+}
+
+/* Warna teks saat hover untuk tombol */
+.btn-contact:hover,
+.btn:hover {
+  color: orangered;
+}
+
+/* Margin khusus untuk item navbar */
+.navbar-nav .nav-item {
+  margin-left: 1rem; /* Sesuaikan jarak antar item */
+  color: #f8f4f4 !important;
+}
+
+/* Margin kiri khusus untuk logo */
+.custom-margin-left {
+  margin-left: 20px;
+}
+
+/* Padding khusus untuk kontainer navbar */
+.navbar-container {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+/* Warna latar belakang khusus untuk navbar */
+.custom-navbar {
+  background-color: #1e3d6d !important;
+}
+
+/* Styling khusus untuk tombol custom */
+.custom-btn {
+  background-color: #111727 !important;
+  color: white !important;
+  padding: 10px 20px !important; /* Sesuaikan padding */
+  font-size: 15px !important;
+  text-decoration: none !important;
+  text-align: center;
+  border-radius: 10px !important;
+}
+
+/* Styling khusus untuk kontainer custom */
+.custom-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  max-width: 1500px;
+  margin: 120px auto;
+  padding: 40px 20px;
+  background-color: #E5F0FF;
+  border-radius: 7px;
+}
+
+/* Styling untuk kontainer teks */
+.text-container {
+  width: 50%;
+  margin-right: 50px;
+  text-align: left;
+}
+
+.text-container h1 {
+  font-size: 1.5em;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.text-container p {
+  text-align: justify;
+  padding-bottom: 15px;
+}
+
+/* Styling untuk kontainer tombol */
+.buttons {
+  display: flex;
+  justify-content: flex-start;
+  gap: 15px;
+  margin-bottom: 20px;
+  padding-bottom: 5px;
+}
+
+.buttons button,
+.buttons a {
+  border-radius: 15px;
+  padding: 5px 15px;
+  font-size: 15px;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+}
+
+.buttons button {
+  background-color: #111727;
+  color: white;
+}
+
+.buttons a {
+  background-color: rgb(243, 243, 243);
+  color: #111727;
+  text-decoration: none;
+}
+
+.buttons a:hover {
+  background-color: rgb(204, 210, 212);
+}
+
+/* Styling untuk ikon media sosial */
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.social-icons a {
+  font-size: 1.2em;
+  color: black;
+  cursor: pointer;
+}
+
+/* Styling untuk kontainer gambar */
+.image-container {
+  width: 25%;
+  text-align: center;
+  background-color: #f8f4f4;
+  border-radius: 7px;
+  margin-right: 0;
+}
+
+.image-container img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  margin-bottom: 5px;
+}
+
+.image-container h1 {
+  margin: 5px 0;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.image-container p {
+  margin: 5px 0;
+  padding-bottom: 10px;
+  color: #494647;
+  font-weight: 500;
+}
+
+/* Styling responsif untuk perangkat dengan lebar maksimum 768px */
+@media (max-width: 768px) {
+  .custom-container {
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+  }
+
+  .text-container,
+  .image-container {
+    width: 100%;
+    margin: 0;
+    margin-bottom: 20px;
+  }
+
+  .text-container {
+    margin-right: 0;
+  }
+
+  .image-container img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+/* Styling responsif untuk perangkat dengan lebar maksimum 576px */
+@media (max-width: 576px) {
+  .navbar-toggler {
+    width: 100%;
+  }
+
+  .navbar-collapse {
+    text-align: center;
+  }
+
+  .navbar-nav {
+    width: 100%;
+  }
+
+  .nav-item {
+    width: 100%;
+  }
+
+  .nav-link {
+    width: 100%;
+    text-align: center;
+  }
+}
